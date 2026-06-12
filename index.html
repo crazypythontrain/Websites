@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Scenic Route To Forever | Official Manga Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #0a0606; /* Shifted slightly warmer to match the red logo */
+            --bg-card: #140f0f;
+            --accent-crimson: #990011; /* Exact match to your logo's deep crimson */
+            --text-main: #fcfafb;
+            --text-muted: #9c9293;
+            --border-color: rgba(255, 255, 255, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background: rgba(10, 6, 6, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo-container img {
+            height: 55px; /* Adjust this depending on your image file layout */
+            display: block;
+        }
+
+        /* Fallback text styled elegantly if image is loading */
+        .logo-fallback {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--text-main);
+        }
+
+        section {
+            padding: 90px 8% 60px 8%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h2::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--border-color) 0%, transparent 100%);
+        }
+
+        /* Overview Section */
+        #overview {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            min-height: 80vh;
+            padding-top: 20px;
+        }
+
+        .hero-text {
+            flex: 1.2;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.8rem;
+            line-height: 1.15;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+
+        .hero-text span {
+            color: var(--accent-crimson);
+        }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            margin-bottom: 40px;
+            color: var(--text-muted);
+            font-weight: 300;
+            max-width: 540px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--text-main);
+            color: var(--bg-dark);
+            padding: 14px 32px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background-color: var(--accent-crimson);
+            color: white;
+            box-shadow: 0 10px 20px rgba(153, 0, 17, 0.3);
+        }
+
+        .hero-image {
+            flex: 0.8;
+            background: linear-gradient(135deg, #1f1616 0%, #0f0a0a 100%);
+            height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* Grid & Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .card-img-placeholder {
+            height: 240px;
+            background-color: #1a1313;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.15);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .card-content {
+            padding: 24px;
+        }
+
+        .card-content h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .card-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--accent-crimson);
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        /* Timeline for History Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto 0 auto;
+            padding-left: 30px;
+            border-left: 1px solid var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 45px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--bg-dark);
+            border: 2px solid var(--accent-crimson);
+        }
+
+        .timeline-date {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            color: var(--accent-crimson);
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .timeline-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .price {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 100px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 992px) {
+            #overview {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+            .hero-text p {
+                margin: 0 auto 30px auto;
+            }
+            .hero-image {
+                width: 100%;
+                max-width: 450px;
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            nav a {
+                margin: 0 10px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="C:\Users\Dean\Desktop\The_Scenic_Route_To_Forever\logo.png" alt="The Scenic Route To Forever Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <a href="#" class="logo-fallback" style="display:none;">The Scenic Route To Forever</a>
+        </div>
+        <nav>
+            <a href="#overview">Home</a>
+            <a href="#manga">Chapters</a>
+            <a href="#news">News</a>
+            <a href="#history">History</a>
+            <a href="#shop">Shop</a>
+        </nav>
+    </header>
+
+    <section id="overview">
+        <div class="hero-text">
+            <h1>The Scenic Route <br><span>To Forever</span></h1>
+            <p>Every journey has a destination, but some paths are bound by eternity. Dive into the beautifully crafted world of this brand new manga series.</p>
+            <a href="#manga" class="btn">Read Chapter 1</a>
+        </div>
+        <div class="hero-image">
+            [ MAIN COVER ARTWORK ]
+        </div>
+    </section>
+
+    <section id="manga">
+        <h2>Manga Chapters</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-img-placeholder">Chapter 2 Thumbnail</div>
+                <div class="card-content">
+                    <div class="card-meta">Latest Release</div>
+                    <h3>Chapter 02: Next Stop</h3>
+                    <p>The journey continues as unfamiliar landscapes bring forward unexpected encounters.</p>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.85rem;">Read Now</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img-placeholder">Chapter 1 Thumbnail</div>
+                <div class="card-content">
+                    <div class="card-meta">Debut</div>
+                    <h3>Chapter 01: The Boarding Pass</h3>
+                    <p>Step onto the tracks. The prologue to a breathtaking eternal journey begins here.</p>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.85rem;">Read Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news">
+        <h2>Latest News</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-meta">June 2026</div>
+                    <h3>Official Logo Revealed!</h3>
+                    <p>We are incredibly excited to share the official title design for <em>The Scenic Route To Forever</em>. Let us know your thoughts on our socials!</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-meta">May 2026</div>
+                    <h3>Website Central Hub Live</h3>
+                    <p>Welcome to our ad-free, direct studio homepage. Keep an eye here for upcoming chapter releases and physical product drops.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="history">
+        <h2>The History</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">JUNE 2026</div>
+                <div class="timeline-title">Visual Identity & Branding Lock</div>
+                <div class="timeline-desc">Finalized the typography layout and design tokens to breathe life into the aesthetic direction of the series.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">MID 2026</div>
+                <div class="timeline-title">Chapter Storyboarding</div>
+                <div class="timeline-desc">Mapped out the narrative arcs, scenery designs, and pacing elements defining our main characters' trajectory.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">EARLY 2026</div>
+                <div class="timeline-title">The Initial Spark</div>
+                <div class="timeline-desc">The concept of an infinite, scenic journey took shape. Scripts and structural themes began active development.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop">
+        <h2>Official Shop</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-img-placeholder">Merch Item</div>
+                <div class="card-content">
+                    <div class="card-meta">Limited Edition</div>
+                    <h3>Official Logo Matte Art Print</h3>
+                    <p>A striking archival quality display print featuring the crimson logo typography.</p>
+                    <span class="price">$15.00</span>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.85rem; background: transparent; color: var(--text-main); border: 1px solid var(--border-color);">Buy via Ko-fi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 The Scenic Route To Forever. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
