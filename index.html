@@ -32,33 +32,41 @@
             overflow-x: hidden;
         }
 
-    header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 8%; /* Increased top/bottom padding to 25px */
-    background: rgba(10, 6, 6, 0.95); /* Slightly darker for a more premium blend */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 1px solid var(--border-color);
-}
+        /* Perfected Flex Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(10, 6, 6, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+        }
 
+        /* Scaled Logo setup */
         .logo-container img {
-    height: 110px; /* Increased from 55px to make it bold and visible */
-    display: block;
-    mix-blend-mode: color-dodge; /* Blends the gray grid away perfectly */
-}
+            height: 90px; 
+            width: auto;
+            display: block;
+        }
+
+        /* Balanced, spaced navigation links */
+        nav {
+            display: flex;
+            align-items: center;
         }
 
         nav a {
             color: var(--text-muted);
             text-decoration: none;
-            margin-left: 30px;
+            margin-left: 35px;
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
             transition: color 0.3s ease;
         }
 
@@ -302,22 +310,22 @@
             }
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             header {
                 flex-direction: column;
                 gap: 15px;
                 padding: 15px;
             }
             nav a {
-                margin: 0 10px;
-                font-size: 0.85rem;
+                margin: 0 12px;
+                font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
 
-<header>
+    <header>
         <div class="logo-container">
             <img src="logo.png" alt="The Scenic Route To Forever Logo">
         </div>
