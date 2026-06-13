@@ -10,9 +10,9 @@
     
     <style>
         :root {
-            --bg-dark: #0a0606; /* Shifted slightly warmer to match the red logo */
+            --bg-dark: #0a0606; 
             --bg-card: #140f0f;
-            --accent-crimson: #990011; /* Exact match to your logo's deep crimson */
+            --accent-crimson: #990011; 
             --text-main: #fcfafb;
             --text-muted: #9c9293;
             --border-color: rgba(255, 255, 255, 0.06);
@@ -47,17 +47,8 @@
         }
 
         .logo-container img {
-            height: 55px; /* Adjust this depending on your image file layout */
+            height: 55px; 
             display: block;
-        }
-
-        /* Fallback text styled elegantly if image is loading */
-        .logo-fallback {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            font-style: italic;
-            color: var(--text-main);
-            text-decoration: none;
         }
 
         nav a {
@@ -324,121 +315,6 @@
 </head>
 <body>
 
- <header>
+    <header>
         <div class="logo-container">
-            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAGQAm0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usf4e51c342939fx8fT19vf46fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1FVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usf4e51c342939fn5+fX5+fr/2gAMAwEAAhEDEQA/APf6KKKACiiigAooooAxtYvdTtL6xSzitpLeeTynMpO5WKswIwemEJPrg+hB2aztVsTeGwdZfLkt7pZQSpORhlZevGVZhk9PxFZ1vL9gtZtVvSgKxs/mGMRnyS25c5wMhfQZz+r5ebYlzUNGzoKKjt7iG6gSe3mSaGQZSSNgysPUEcGpKRQUUUUAFFFNkkSKNpJHVI0BZmY4AA6kmgB1FUY9Z0ubf5WpWcnl537Z1O3HXODxiotL17TNZmuItPvIrhoCA4jYHgjOQRwR9OmRVcrtezFdGlRRRUjCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigArB17xPHozpAto8txKAYgWwrc4OB1IGeTjHGOpArVvtQs9NtzcXtxHBEDjc5xk+gHc+wri/E15Y6vF/pUawvChMMbI5aUHAIIH0B9B2PJq6cOaXvIidRU4uTdkan/CT20rRzOkySJG0S+U+UZwSNoA6scEeg5yQOasX0NrdWbDUJ2e1gO0gqV3L/AHEC846cDrj0rjLS2isZpLu/iR5wGljWPLNGeX2k98lQeBwce+X2/imW7unidIInEck0W+Mszl8N6gDAHUngA8jmtXThGPMtWcyxFZtNqyO6XWtNt7e0gRZIkkYwQRLEcqExkEDoFyMk8ehyMVoWt7BebzD5nyHB3xMn8wM1w0V/wDbdDkM8FvHcpLHK0iAgY6AgdsZI5A7EGrg1uW0uGltZZU+by2I2sNqjggHgfN3Y9wAOlQp/wApvHEu9pKx2VFR28wubeKdUkRZEDhZF2sARnBHY+1SVodQUUUUAFZviaG6uPC2rwWSs11JZzJCqsVJcoxUAjoc9D2rSooWjuBwWhWWpaHdW2u2Hhm2gW4tVtrnT4biOKWNgclyThWzySOWBA/vHHVeHNJbRNChs5HElwWee4cfxSyOXc/TcxwOwAFadFU5XAKKKKkYUUUUAFFFFABRRK6wwvKyuyopYqiFmIAzhQOST6Dk1wOn6/q2t3CyzrFbpI7K9srMpjRSOAc/McHJJ4ByOMCrhBzuRUmobnfUVh3WpJZ3dvaQRb7m4YkL93O364Ue2SOnfFasdyr3UloY3SaNBIQcYKnOCMH1B9+Kbi0UpIloooqSgooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAxtYlZrrTYYnkVpbna7RuUIRVLMOPfHB615v4hE8F7p00NxcvI9vslA/dbvLPyngdMAnvjHfv6Zq0YMNu+FzHcI25v4ecenof5V5zrbR2l8tq8YgR3eWNfLHzR9AepIByDkkHjGea7KCstDzMW7zbfb+vyOK1DUI9M1S9NxbpczSybvLkyUjOMZwBgc9unbPrX0nUIptWhVvLSZ22mNEO05/iA7AHHOfTrzWnfeH473XIb75TbygNKgPzjYvXnjB+XP58VfTStNj1p5IogtwuJA3lnYgXpg/dGD274rsS1sc6lTcbdfIs+b9qtYbyzImiC+ZG8bBlfI/hI4Ofw/Gs/etG9xZz6xN5Yur/Mm9h8yRDlFPpgfqSTzVbXdWtNK05lkuQ9wJ/tEcK8u7BiCMA/d529cZ7mqPh7VfEF/NawXNoLSz2EyzSQNuZexC4GAc88DHr2qZR5fX8hx99NpadWdBb2dnb306KrxSviSQFNo+YnkHvznOO9bWkyF9Mt0bcXjURsX++SOAxH+0Bu/Gsa6uo7B7qYgXLRgMUD7GZRnCqCOTyT2GDwDWhol0L7T0uzIHaXLFvLZB2BwCAccHnnNYTpxWvU78POfLytWRoUUUVidYUUUUAZWp6/pumWlzNdXsEQtzscPIBtYnAz6ZJAFcN4/XUbHwfceII9Vll1GWytrBvswCwmOWRC8gBGcln3Z6jIFdrc6fphvbnU7797uVdyzgNHHt7gY4J4yTnpwQK4jxhq6a94f/4RaDRLxbK/gWawmjA27YXWTa2R0OwBcHOXHA6VcbX03EVPAur6hoXiDUdO/smarokzLPp8NvIHeNsBWLFiNqlV+7kYI6V3tlr1leX32HLwXnliaOCUfPJEcYkAGeMnp1HGeorlfCGj32jXWuQXBAsGv3ubD94rDY4BYEA5Ub95w2DkmuqOj2D6nHqTQBruNNiykkkDOeOfXvUys3cC9RRRUjIL2ziv7SS2nXdHIuDgkH1GCCOfSuX8RW11YaTLIitPGD8zqpJjIHDHBwAO556HgAmusorWnU5NenYyqUlUWu5xF1qC22nwzW5gZ/L+WOPbK8pIx14A578nvisXQ9Vun1W5iu3Yv5IcxSPlN69XUnqAODnjK/hXS694WfUL+S9gXy5Hj2I8ZGQQOSSRwB/snkk9K5G601bW3kttXkZJpMMLt13qygfd3AjB3Y4PX0roUKcl2fyOOq6idtrf15luzm1jX9ea9trmYWiZjeWN22qB0UL90YODn8O9ehRxR29rDb7v3CgJuMhUv6DOc89OnP41X0qDToNLgi03yWsmTMbREMrA9TkdSeee9XwAFAHArCcruyVkjphHljbcKKKKgoKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn96l+T0pKKACiio7ieO1t5biZtsUSTO7egXp+g/I+9NRbYm7EuaXNcvofidNVvJLWSDyJFDeX8+7fjJI6DBxyB9R1rO1nxReWGoSW1ssDSRlfOjeMs8fGSRg8gggjgd+uDVunK9jP2seW79DuOf71L+VcTpviO+vdZWzlSAQTDdG6RncoxkBiTgHrnjsfet7XNXGkWazBPMkd9iKTgZwSSfbg/pQ6ck0u4KpFpy7Gx/vLRubvXIeGfEd1qt5Ja3iRByhkjkjBUHBAKkc88gg/XpXb7aTjKLsyoyUkmiPaO/wCVDfJTqbU36FWAe9G9vR6KPloE0g3N6GlVn/ijpvyf7NLuT/Zpg+w/ef4Y/wBaPn/utSbl/uLQ3yfw0Csh271Wms6/wN/30KPkfstLsXp8tDDTqN8/b/D
-            <a href="#overview">Home</a>
-            <a href="#manga">Chapters</a>
-            <a href="#news">News</a>
-            <a href="#history">History</a>
-            <a href="#shop">Shop</a>
-        </nav>
-    </header>
-        </div>
-        <nav>
-            <a href="#overview">Home</a>
-            <a href="#manga">Chapters</a>
-            <a href="#news">News</a>
-            <a href="#history">History</a>
-            <a href="#shop">Shop</a>
-        </nav>
-    </header>
-
-    <section id="overview">
-        <div class="hero-text">
-            <h1>The Scenic Route <br><span>To Forever</span></h1>
-            <p>Every journey has a destination, but some paths are bound by eternity. Dive into the beautifully crafted world of this brand new manga series.</p>
-            <a href="#manga" class="btn">Read Chapter 1</a>
-        </div>
-        <div class="hero-image">
-            [ MAIN COVER ARTWORK ]
-        </div>
-    </section>
-
-    <section id="manga">
-        <h2>Manga Chapters</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-img-placeholder">Chapter 2 Thumbnail</div>
-                <div class="card-content">
-                    <div class="card-meta">Latest Release</div>
-                    <h3>Chapter 02: Next Stop</h3>
-                    <p>The journey continues as unfamiliar landscapes bring forward unexpected encounters.</p>
-                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.85rem;">Read Now</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img-placeholder">Chapter 1 Thumbnail</div>
-                <div class="card-content">
-                    <div class="card-meta">Debut</div>
-                    <h3>Chapter 01: The Boarding Pass</h3>
-                    <p>Step onto the tracks. The prologue to a breathtaking eternal journey begins here.</p>
-                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.85rem;">Read Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="news">
-        <h2>Latest News</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-content">
-                    <div class="card-meta">June 2026</div>
-                    <h3>Official Logo Revealed!</h3>
-                    <p>We are incredibly excited to share the official title design for <em>The Scenic Route To Forever</em>. Let us know your thoughts on our socials!</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <div class="card-meta">May 2026</div>
-                    <h3>Website Central Hub Live</h3>
-                    <p>Welcome to our ad-free, direct studio homepage. Keep an eye here for upcoming chapter releases and physical product drops.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="history">
-        <h2>The History</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-date">JUNE 2026</div>
-                <div class="timeline-title">Visual Identity & Branding Lock</div>
-                <div class="timeline-desc">Finalized the typography layout and design tokens to breathe life into the aesthetic direction of the series.</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">MID 2026</div>
-                <div class="timeline-title">Chapter Storyboarding</div>
-                <div class="timeline-desc">Mapped out the narrative arcs, scenery designs, and pacing elements defining our main characters' trajectory.</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">EARLY 2026</div>
-                <div class="timeline-title">The Initial Spark</div>
-                <div class="timeline-desc">The concept of an infinite, scenic journey took shape. Scripts and structural themes began active development.</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="shop">
-        <h2>Official Shop</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-img-placeholder">Merch Item</div>
-                <div class="card-content">
-                    <div class="card-meta">Limited Edition</div>
-                    <h3>Official Logo Matte Art Print</h3>
-                    <p>A striking archival quality display print featuring the crimson logo typography.</p>
-                    <span class="price">$15.00</span>
-                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.85rem; background: transparent; color: var(--text-main); border: 1px solid var(--border-color);">Buy via Ko-fi</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 The Scenic Route To Forever. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+            <img src="
